@@ -23,18 +23,7 @@ To gain practical skills in working with the Python environment through market b
 
 ### Task Description
 
-The task involves analyzing market baskets. Given a set of items ( I = {i_1, i_2, \\dots, i_n} ) and a set of transactions ( D = {T_1, T_2, \\dots, T_m} ), where each transaction ( T = {i_k \\mid i_k \\in I} \\subseteq I ) represents items purchased together in one receipt.
-
-The support of any subset ( F \\subseteq I ) is defined as: \[ \\text{Supp}(F) = \\frac{|\\mathcal{D}\_F|}{|D|} \] where ( \\mathcal{D}\_F = {T_j \\mid F \\subseteq T_j} ) is the set of transactions containing ( F ), and ( |D| ) is the number of transactions.
-
-Find the set of frequent itemsets using the following algorithm:
-
-- (a) Build the set of single-element frequent itemsets: \[ L_1 = {i \\mid i \\in I, \\text{Supp}(i) \\geq \\text{Supp}*{\\min}} \] where ( \\text{Supp}*{\\min} ) is a given minimum support threshold.
-- (b) For all ( k = 2, \\dots, n ): Build the sets of ( k )-element frequent itemsets: \[ L_k = {F \\cup {i} \\mid F \\in L\_{k-1}, i \\in L_1 \\setminus F, \\text{Supp}(F \\cup {i}) \\geq \\text{Supp}\_{\\min}} \]
-- (c) If ( L_k = \\emptyset ), exit the loop.
-- (d) The resulting set of frequent itemsets is ( L_1 \\cup L_2 \\cup \\dots \\cup L_k ).
-
-> **Note**: The original description references a figure on gradient sensitivity analysis for decision support with alternatives ( a_1, a_2, a_3 ), but it is not included here.
+<img width="881" height="659" alt="image" src="https://github.com/user-attachments/assets/7f26aa9b-d3cf-4ed0-b503-f23dd0552020" />
 
 ### Implementation Notes
 
