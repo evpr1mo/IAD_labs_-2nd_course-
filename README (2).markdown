@@ -21,32 +21,8 @@ This repository contains the laboratory works for the **Intelligent Data Analysi
 To gain practical skills in working with the Python environment through market basket analysis.
 
 ### Task Description
-The task involves analyzing market baskets to identify frequently purchased item combinations. You are given:
-- A set of items: \( I = \{i_1, i_2, \dots, i_n\} \)
-- A set of transactions: \( D = \{T_1, T_2, \dots, T_m\} \), where each transaction \( T \) is a subset of items (e.g., items bought together in one receipt).
 
-The **support** of an itemset \( F \) (a subset of \( I \)) is the fraction of transactions in \( D \) that contain all items in \( F \). It is calculated as:
-\[
-\text{Support}(F) = \frac{\text{Number of transactions containing } F}{\text{Total number of transactions}}
-\]
-Here, the number of transactions containing \( F \) is the count of transactions \( T_j \) where \( F \subseteq T_j \), and the total number of transactions is the size of \( D \).
-
-Your goal is to find all **frequent itemsets**—sets of items that appear together in at least a minimum percentage of transactions (defined by a threshold \( \text{Supp}_{\min} \)). Use the following algorithm:
-
-1. **Find single-item frequent itemsets** (\( L_1 \)):
-   - Identify all individual items \( i \) in \( I \) whose support is at least \( \text{Supp}_{\min} \).
-   - These form the set \( L_1 \).
-
-2. **Generate larger frequent itemsets**:
-   - For \( k = 2, 3, \dots, n \):
-     - Create candidate itemsets of size \( k \) by combining itemsets from \( L_{k-1} \) with single items from \( L_1 \) (excluding items already in the itemset).
-     - Keep only those itemsets whose support is at least \( \text{Supp}_{\min} \). These form \( L_k \).
-   - Stop when no new frequent itemsets are found (\( L_k \) is empty).
-
-3. **Output the result**:
-   - The final set of frequent itemsets is the union of all \( L_1, L_2, \dots, L_k \).
-
-> **Note**: The original description references a figure on gradient sensitivity analysis for decision support with alternatives \( a_1, a_2, a_3 \), but it is not included here.
+<img width="881" height="659" alt="image" src="https://github.com/user-attachments/assets/aa0b27e5-2528-44a5-8c28-204544594703" />
 
 ### Implementation Notes
 Implement the algorithm in Python using basic libraries like NumPy for efficiency. Avoid external libraries for the core logic.
@@ -178,6 +154,3 @@ Use `BaggingClassifier`. Consider different values of parameters such as `max_sa
 5. Calculate bias and variance for individual models and the ensemble.
 6. Compare training time of the ensemble vs. individual models.
 7. Draw conclusions: Assess if the ensemble performs better than individual models on the given data.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details (if applicable).
